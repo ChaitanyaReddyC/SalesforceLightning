@@ -1,0 +1,13 @@
+.THIS {
+}
+.THIS.headering {
+    height : 15%;
+    width : 100%;
+    background-color: linen;
+}
+
+.THIS p{
+    /*font-family: token(myBodyTextFontFace);
+    font-weight: token(myBodyTextFontWeight);
+    font-size : token(myFontSize); */
+}

@@ -1,0 +1,17 @@
+<aura:component >
+    
+    <aura:attribute name="visible" type="Boolean"/>
+	<div class="{! 'container header-font-color ' + if(v.visible,'','slds-hide')}">
+   		 <form class="slds-form--stacked">
+       		<div class="slds-form-element slds-is-required">
+         		<div class="slds-form-element__control header-font-color">
+                  
+                    <ui:button label="Back" 
+                       class="slds-button slds-button--neutral slds-grid slds-grid--align-center"
+                       labelClass="label"
+                       press="{!c.goBack}"/>
+           		</div>
+            </div>
+         </form>
+       </div>
+</aura:component>
