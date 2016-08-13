@@ -1,0 +1,31 @@
+<aura:component implements="force:appHostable" controller="UpsertAccount">
+    <ltng:require styles="/resource/slds090/assets/styles/salesforce-lightning-design-system.min.css"/>
+    <aura:registerEvent name="registerLearnEvent" type="c:LearnEvent"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="pageNumber" type="Integer"/>
+    <aura:attribute name="visible" type="Boolean"/>
+    
+    <div class="{! 'container header-font-color '+ if(v.visible,'','slds-hide')}">
+        <form class="slds-form--stacked">
+            <div class="slds-form-element slds-is-required">
+                <div class="slds-form-element__control header-font-color">
+                    
+                    <ui:inputText aura:id="accName" label="Account Name"
+                                  class="slds-input" 
+                                  labelClass="slds-form-element__label" 
+                                  required="true"/>
+                    <br/>
+                    <div class="slds-grid slds-grid--align-center">
+                        <ui:button label="Submit" 
+                                   class="slds-button slds-button--neutral"
+                                   labelClass="label"
+                                   press="{!c.createAccount}"/>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    
+    
+</aura:component>
